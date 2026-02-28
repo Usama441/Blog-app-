@@ -1,0 +1,24 @@
+<h1>NEW Blog Post page </h1>
+
+
+
+<%= form_with model: @blog_post, local: true do |form| %>
+<% if @blog_post.errors.any? %>
+  <div>
+    <% form.object.errors.full_messages.each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+<% end %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <%= form.submit "create Blog Post" %>
+<% end %>   
