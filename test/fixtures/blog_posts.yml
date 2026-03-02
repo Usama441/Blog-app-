@@ -1,9 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  body: MyText
+draft:
+  title: Draft Post
+  body: This is a draft post that should not be published.
+  published_at: null
 
-two:
-  title: MyString
-  body: MyText
+published:
+  title: Published Post
+  body: This is a published post that should be visible.
+  published_at: <%= 1.day.ago %>   
+
+scheduled:
+  title: Scheduled Post
+  body: This is a scheduled post that should be published in the future.
+  published_at: <%= 1.day.from_now %>

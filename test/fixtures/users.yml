@@ -4,8 +4,16 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+one:
+
+  # Devise requires email not be empty; the unique index on users.email
+  # will raise if multiple fixtures end up with the same value ("" by
+  # default). Provide distinct addresses so fixtures can load cleanly.
+  email: one@example.com
+
+  # If you need other fields (password, etc.) they can be added here.
+  # Only constraints (not validations) are enforced during fixture load.
+
+two:
+  email: two@example.com
+  # column: value

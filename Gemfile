@@ -1,7 +1,12 @@
 source "https://rubygems.org"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.4"
+# Minitest is included in Ruby’s stdlib; Rails 8.1’s line filtering code
+# is compatible with the bundled version so no explicit gem is needed.
+
+# Use a recent Rails release with updated test tooling
+# Rails 8.1 includes a line‑filtering patch compatible with Minitest 6
+# bumping to ~> 8.1 will pull in 8.1.2 (latest at the moment).
+gem "rails", "~> 8.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use sqlite3 as the database for Active Record

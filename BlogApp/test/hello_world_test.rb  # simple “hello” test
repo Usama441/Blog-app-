@@ -1,0 +1,11 @@
+Gemfile
+gem 'minitest', '~> 5.0'
+
+test/hello_world_test.rb
+require 'minitest/autorun'
+
+class HelloWorldTest < Minitest::Test
+  def test_hello
+    assert_equal 'hello', 'hello'
+  end
+end
